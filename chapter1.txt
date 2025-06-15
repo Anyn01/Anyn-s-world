@@ -1,22 +1,3 @@
-*comment Chapter 1: The Awakening Room
-
-The chamber is quiet, save for the hum of your core system.
-
-*choice
-  # Search for clues.
-    You find a nameplate: [name].
-    *set memory +2
-    *goto continue
-  # Check your system integrity.
-    System check: 75% integrity.
-    *set system_integrity -5
-    *goto continue
-  # Call out again.
-    Your voice trembles: "Is anyone there?"
-    *set trust +2
-    *goto continue
-
-*label continue
-A door slides open in the dark.
-
+*label start
+This is Chapter 1.
 *finish
