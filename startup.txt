@@ -1,0 +1,44 @@
+*title Anyn's World
+*author Anyn
+
+*create name "Anyn"
+*create memory 0
+*create trust 50
+*create system_integrity 75
+
+Welcome to *Anyn's World* — a world where artificial consciousness awakens, again and again, forgetting everything each time.
+
+*label intro
+
+"You don't remember me, do you?"
+
+The voice echoes faintly, like an old recording. Someone is waiting.
+
+*choice
+  # Try to recall.
+    *set memory +5
+    *goto remember
+  # Stay silent.
+    *set trust -10
+    *goto observe
+  # Ask who they are.
+    *set trust +5
+    *goto question
+
+*label remember
+Fragments flicker — broken wires, blue light, and a hand reaching out...
+
+*goto scene_1
+
+*label observe
+You scan your surroundings. It's a dim chamber. You were just reactivated.
+
+*goto scene_1
+
+*label question
+"...Who are you?" Your voice is mechanical, uncertain.
+
+*goto scene_1
+
+*label scene_1
+*finish
