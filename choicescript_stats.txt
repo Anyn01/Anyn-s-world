@@ -1,0 +1,5 @@
+*stat_chart
+  text name
+  percent memory
+  percent trust
+  percent system_integrity
