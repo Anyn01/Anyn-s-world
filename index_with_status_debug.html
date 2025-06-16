@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anyn's World (Debug)</title>
+  <script src="../scene.js" onerror="showError('scene.js failed to load')"></script>
+  <script src="../util.js" onerror="showError('util.js failed to load')"></script>
+  <script src="../navigator.js" onerror="showError('navigator.js failed to load')"></script>
+  <script src="../ui.js" onerror="showError('ui.js failed to load')"></script>
+  <script src="../alert.js" onerror="showError('alert.js failed to load')"></script>
+  <script src="../stats.js" onerror="showError('stats.js failed to load')"></script>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    #errors { color: red; margin-top: 2em; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Anyn's World (Debug Mode)</h1>
+  <div id="status"></div>
+  <div id="text"></div>
+  <form id="form" onsubmit="return false;"></form>
+  <div id="errors"></div>
+  <script>
+    function showError(msg) {
+      const el = document.getElementById('errors');
+      el.innerText += "\n⚠️ " + msg;
+    }
+
+    window.onerror = function(message, source, lineno, colno, error) {
+      showError("Runtime Error: " + message + " at " + source + ":" + lineno);
+    }
+
+    window.onload = function() {
+      try {
+        window.stats = new Stats();
+        window.stats.startingStats = ["memory", "trust", "system_integrity"];
+        window.nav = new Navigator(["startup", "mygame/"], window.stats, "text", "form");
+        window.nav.start();
+      } catch (e) {
+        showError("Startup Exception: " + e.message);
+      }
+    };
+  </script>
+</body>
+</html>
