@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Anyn's World</title>
-  <script src="./scene.js?v=1"></script>
-<script src="./util.js?v=1"></script>
-<script src="./navigator.js?v=1"></script>
-<script src="./ui.js?v=1"></script>
-<script src="./alert.js?v=1"></script>
-<script src="./stats.js?v=1"></script>
+
+  <!-- 加载 JS 文件并确保 defer -->
+  <script src="./scene.js?v=1" defer></script>
+  <script src="./util.js?v=1" defer></script>
+  <script src="./navigator.js?v=1" defer></script>
+  <script src="./ui.js?v=1" defer></script>
+  <script src="./alert.js?v=1" defer></script>
+  <script src="./stats.js?v=1" defer></script>
+
+  <!-- 样式文件 -->
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <h1>Anyn's World</h1>
   <div id="status"></div>
   <div id="text"></div>
   <form id="form" onsubmit="return false;"></form>
-  <script>
-    window.onload = function() {
+
+  <!-- 启动 JS -->
+  <script defer>
+    window.onload = function () {
+      const textEl = document.getElementById("text");
+      const formEl = document.getElementById("form");
+
+      // 初始化状态系统
       window.stats = new Stats();
       window.stats.startingStats = ["memory", "trust", "system_integrity"];
-      window.nav = new Navigator(["startup"], "mygame/", window.stats, "text", "form");
-      window.nav.start();
+
+      // 初始化故事引擎，加载 chapter1.txt
+      const engine = new SceneEngine("chapter1", textEl, formEl);
+      engine.load();
     };
   </script>
 </body>
