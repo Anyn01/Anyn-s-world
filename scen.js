@@ -4,7 +4,7 @@ class SceneEngine {
     this.fileName = fileName;
     this.textEl = textEl;
     this.formEl = formEl;
-    this.lines = [];
+    this.lines = [
     this.index = 0;
   }
 
