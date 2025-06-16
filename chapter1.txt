@@ -1,17 +1,17 @@
 Welcome to Anyn's World. This is your journey into memory and identity.
 
 *choice
-Begin system scan
-#Memory integrity scan completed. No anomalies detected.
+Run diagnostics
+#System scan complete. No critical issues found.
 
 *choice
-Check AI status
-#System stable. No emotional leakage detected.
+Check AI logs
+#Log entry 01: Initialization sequence completed.
 
 *choice
-Open first directive
-#You are required to explore the first memory archive.
+Access directive
+#Proceed to archive gate.
 
-Let’s proceed together.
+System ready.
 
 *finish chapter2
