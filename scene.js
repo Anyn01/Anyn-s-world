@@ -10,7 +10,7 @@ class SceneEngine {
 
   async load() {
     try {
-      const response = await fetch(this.fileName);
+      const response = await fetch(this.fileName + ".txt");
       const text = await response.text();
       this.lines = text.split("\n").map(line => line.trim()).filter(Boolean);
       this.index = 0;
@@ -41,6 +41,7 @@ class SceneEngine {
           this.textEl.innerHTML += `<br><b>👉 ${choiceLine}</b><br>${resultLine}`;
           this.index += 2;
           this.formEl.innerHTML = "";
+
           const nextBtn = document.createElement("button");
           nextBtn.textContent = "Continue";
           nextBtn.onclick = () => this.displayNextLine();
@@ -61,5 +62,17 @@ class SceneEngine {
     nextBtn.textContent = "Next";
     nextBtn.onclick = () => this.displayNextLine();
     this.formEl.appendChild(nextBtn);
+
+    // 🔄 跳转章节判断：检测是否是 *finish chapter2 或其他
+    if (line.startsWith("*finish")) {
+      const parts = line.split(" ");
+      const nextChapter = parts[1];
+      if (nextChapter) {
+        setTimeout(() => {
+          const newEngine = new SceneEngine(nextChapter, this.textEl, this.formEl);
+          newEngine.load();
+        }, 500); // 等待视觉反馈
+      }
+    }
   }
 }
