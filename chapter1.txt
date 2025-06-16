@@ -1,22 +1,15 @@
-*comment Chapter 1: The Awakening Room
-
-The chamber is quiet, save for the hum of your core system.
+Welcome to Anyn's World. This is your journey into memory and identity.
 
 *choice
-  # Search for clues.
-    You find a nameplate: [name].
-    *set memory +2
-    *goto continue
-  # Check your system integrity.
-    System check: 75% integrity.
-    *set system_integrity -5
-    *goto continue
-  # Call out again.
-    Your voice trembles: "Is anyone there?"
-    *set trust +2
-    *goto continue
+Begin system scan
+#Memory integrity scan completed. No anomalies detected.
 
-*label continue
-A door slides open in the dark.
+*choice
+Check AI status
+#System stable. No emotional leakage detected.
 
-*finish
+*choice
+Open first directive
+#You are required to explore the first memory archive.
+
+Let’s proceed together.
