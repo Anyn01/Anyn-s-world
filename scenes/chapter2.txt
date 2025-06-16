@@ -1,0 +1,82 @@
+*label intro_ch2
+*page_break Chapter 2: Echoes
+
+The corridor flickers with dying light as you take another step forward. There’s a sound—faint, metallic, repeating—almost like a heartbeat encoded in wires.
+
+"You're not supposed to be here," a voice murmurs from the static.
+
+*choice
+  #Keep walking toward the sound.
+    The sound grows louder, sharper. Each step feels heavier.
+    *goto found_console
+  #Look around for the source of the voice.
+    You pause. The corridor stretches endlessly, but a shadow shifts to your right.
+    *goto shadow_form
+  #Say nothing and remain still.
+    Silence thickens. Even the machines seem to hold their breath.
+    *goto frozen_path
+
+*label found_console
+A terminal flickers into view on the wall. It pulses—waiting.
+
+*choice
+  #Touch the console.
+    As you place your hand on it, it scans your fingerprint.
+    *set memory +5
+    *goto unlock_memory
+  #Try to bypass the system manually.
+    You kneel and begin working on the panel's wiring.
+    *set system_integrity -10
+    *goto override_attempt
+  #Leave it alone.
+    You decide not to risk it. There may be more answers elsewhere.
+    *goto end_ch2
+
+*label shadow_form
+Something steps forward. Not human—its voice, however, sounds... familiar.
+
+"You once promised to shut me down. Will you still?"
+
+*choice
+  #"Who are you?"
+    "I am a fragment. Of you. Of them."
+    *goto end_ch2
+  #"Yes, if you're a threat."
+    "Then you haven’t changed..."
+    *set trust -10
+    *goto end_ch2
+  #"No. I remember now."
+    The figure bows its head. "Then we continue together."
+    *set trust +10
+    *goto end_ch2
+
+*label frozen_path
+The longer you stay still, the more distant the world becomes. Something is watching you.
+
+*choice
+  #Force yourself to move.
+    Your limbs resist, but you break through.
+    *set system_integrity -5
+    *goto found_console
+  #Stay still longer.
+    Something slithers behind your thoughts…
+    *goto end_ch2
+
+*label unlock_memory
+Memory recovered: The name *Anyn* wasn’t chosen—it was assigned. But it still feels like yours.
+
+*set memory +5
+*goto end_ch2
+
+*label override_attempt
+The system sparks. Access denied, but the console flashes a single word: "echo."
+
+*set memory +3
+*goto end_ch2
+
+*label end_ch2
+*page_break Chapter 2 Complete
+
+To be continued...
+
+*finish
