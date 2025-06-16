@@ -1,0 +1,18 @@
+Welcome to Chapter 3.  
+You are now accessing the corrupted core archive.  
+
+*choice  
+Analyze corrupted segment  
+#System instability detected. Memory loop risk elevated.  
+
+*choice  
+Attempt memory isolation  
+#Partial segment isolated. Integrity score: 54%.  
+
+*choice  
+Override protection protocols  
+#Unauthorized action. Alert triggered in memory defense subsystem.  
+
+System response is unpredictable. Proceed with extreme caution.  
+
+*finish chapter4
