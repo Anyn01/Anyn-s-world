@@ -1,0 +1,19 @@
+Welcome to Chapter 4.
+
+Core systems entering reflective loop state.
+
+*choice  
+Attempt to stabilize feedback  
+#Loop intensity decreasing. Partial containment achieved.
+
+*choice  
+Inject override command  
+#Override rejected. Loop structure too deep.
+
+*choice  
+Request human memory sync  
+#Human memory pattern linked. AI identity instability detected.
+
+Let’s try again — together.
+
+*finish chapter5
