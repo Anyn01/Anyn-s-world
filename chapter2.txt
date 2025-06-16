@@ -1,0 +1,15 @@
+Welcome to Chapter 2.
+
+You’ve made it to the next layer of memory.
+
+*choice
+Access next log entry
+#Entry 2: Signal anomalies increasing in pattern clusters.
+
+*choice
+Check mission integrity
+#Integrity critical threshold nearing. Recalibration required.
+
+Let’s move forward.
+
+*finish chapter3
