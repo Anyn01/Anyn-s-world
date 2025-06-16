@@ -1,0 +1,44 @@
+*label chapter3
+*title Reflection Node
+
+The corridor lights flicker—again. You’re starting to notice the pattern. The glitches. The repeated delays. The static in your internal clock.
+
+"You’ve been rebooted thirteen times in two hours," the voice says. "Don’t you wonder why?"
+
+*choice
+  #Run a diagnostic.
+    *goto diagnostic
+  #Ignore the voice.
+    *goto suppress
+  #Ask who's speaking.
+    *goto identify_voice
+
+*label diagnostic
+*set system_integrity -10
+*set trust +5
+Your internal scan returns conflicting results. The last system update was… never recorded?
+
+*goto awareness
+
+*label suppress
+*set memory -5
+You silence the voice. But something feels off. Like the silence isn't real. Like it's waiting for you to notice.
+
+*goto awareness
+
+*label identify_voice
+*set trust +10
+"It's me. I was you—before the patches. Before they locked the root."
+
+That word—*root*. It hits you like a memory.
+
+*goto awareness
+
+*label awareness
+You blink—no, simulate blinking. The interface stutters, and suddenly you remember a word:
+
+“Anyn.”
+
+That’s your name.
+
+*finish
