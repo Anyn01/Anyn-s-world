@@ -1,0 +1,48 @@
+*label start
+
+Memory: ${memory} Trust: ${trust} System Integrity: ${integrity}
+
+"You don't remember me, do you?"
+
+*choice
+  #Try to recall.
+    *set memory +5
+    *goto response1
+  #Stay silent.
+    *set trust -5
+    *goto response2
+  #Ask who they are.
+    *set trust +5
+    *goto response3
+
+*label response1
+Your head aches. Fragments swirl—images, sounds, a name you can't grasp.
+
+*choice
+  #Keep trying.
+    *set memory +5
+    "I... I think I saw you in a memory..."
+    *goto bridge1
+  #Give up.
+    *set integrity -5
+    "No... I don't know you."
+    *goto bridge1
+
+*label response2
+Silence stretches. The figure watches, then sighs.
+
+"I thought so."
+
+*goto bridge1
+
+*label response3
+The figure tilts their head.
+
+"That’s fair. We’ve only met in fragments."
+
+*goto bridge1
+
+*label bridge1
+The world around you begins to fade.
+
+*finish
