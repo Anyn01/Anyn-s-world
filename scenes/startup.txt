@@ -1,0 +1,16 @@
+*title Anyn's World
+*author Anyn01
+
+*scene_list
+  startup
+  chapter1
+  chapter2
+  chapter3
+  chapter4
+
+*create trust 50
+*create memory 0
+*create integrity 75
+
+*comment Game starts here
+*goto_scene chapter1
