@@ -13,3 +13,5 @@ Open first directive
 #You are required to explore the first memory archive.
 
 Let’s proceed together.
+
+*finish chapter2
